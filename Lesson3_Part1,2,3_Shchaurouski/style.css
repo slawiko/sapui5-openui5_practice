@@ -1,0 +1,73 @@
+input[type="text"] {
+	border: 1px solid #DF732E;
+	border-radius: 3px;
+	padding: 7px;
+	outline: 0;
+}
+
+button {
+	background-color: #DF732E;
+	color: #FFFFFF;
+	border: 1px solid #DF732E;
+	border-radius: 3px;
+	padding: 7px;
+	cursor: pointer;
+	outline: 0;
+}
+
+button:hover {
+	background-color: #CC672E; 
+	border: 1px solid #CC672E;
+}
+
+button:active {
+	background-color: #B35B29; 
+	border: 1px solid #B35B29;
+}
+
+.search {
+	margin-top: 15px;
+}
+
+.geolocate {
+	margin-top: 15px;
+}
+
+.info {
+	margin-top: 15px;
+}
+
+.history {
+	margin-top: 15px;
+}
+
+.value {
+	margin: 4px;
+	padding: 4px;
+	color: #FFFFFF;
+	background-color: #DF732E;
+	border-radius: 3px;
+	display: inline-block;
+}
+
+tbody tr:nth-child(odd) {
+	background-color: #E3E3E3;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+td {
+	border-left: solid 1px #CDCDCD;
+	border-top: solid 1px #CDCDCD;
+	padding: 5px;
+}
+
+tbody tr:last-child {
+	border-bottom: solid 1px #CDCDCD;
+}
+
+tbody tr td:last-child {
+	border-right: solid 1px #CDCDCD;
+}

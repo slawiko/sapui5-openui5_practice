@@ -1,0 +1,129 @@
+html {
+  height: 100%;
+  font-family: sans-serif;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  width: 100%;
+}
+
+.flex-container {
+ display: flex;
+ height:100%;
+ box-sizing: border-box;
+}
+
+.flex-container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+  margin-top: -50px;
+}
+
+.flex-item {
+}
+
+.master-block {
+  width: 40%;
+  border-right: 1px solid #F4F4F4;
+}
+
+.detail-block {
+  width: 60%;
+  background: #F1F9F9;
+}
+
+h1.page-title {
+  padding: 6px 0 7px;
+  margin: 0;
+  text-align: center;
+  font-weight: 100;
+}
+
+header {
+  display: block;
+  background-color: #f2f2f2;      
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#f7f7f7,endColorstr=#ededed,GradientType=0);      
+  background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#f7f7f7),color-stop(0.33,#f2f2f2),color-stop(0.75,#f2f2f2),color-stop(1,#ededed));      
+  background: -webkit-linear-gradient(top,#f7f7f7 0,#f2f2f2 33%,#f2f2f2 75%,#ededed 100%);      
+  background: linear-gradient(top,#f7f7f7 0,#f2f2f2 33%,#f2f2f2 75%,#ededed 100%);      
+  color: #666666;
+}
+
+footer {
+  display: block;
+  margin-top: -50px;
+  height: 50px;
+  background-color: rgba(54,62,67,0.96);
+}
+
+.item {
+  overflow: hidden;
+  padding: 0 10px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #F4F4F4;
+  color: #666666;
+}
+
+.item:nth-child(1):hover {
+  background-color: #E4F1FA;
+}
+
+.item:nth-child(2):hover {
+  background-color: #D8FAE5;
+}
+
+.item:nth-child(3):hover {
+  background-color: #FADAD6;
+}
+
+.left-part {
+  float: left;
+}
+
+.item-id {
+  margin: 0;
+  font-size: 13px;
+  color: #B0B0B0;
+}
+
+.item-info {
+  margin: 0;
+  font-size: 13px;
+  color: #B0B0B0;
+}
+
+.right-part {
+  float: right;
+}
+
+.price {
+  margin: 20px 0;
+  text-align: right;
+}
+
+.item-price {
+  margin: 0;
+}
+
+.item-price-type {
+  margin: 0;
+  font-size: 13px;
+  font-family: monospace;
+  color: #B0B0B0;
+}
+
+.item-date {
+  font-size: 13px;
+  color: #B0B0B0;
+}
+
+.right-info {
+  text-align: right;
+}
+
+

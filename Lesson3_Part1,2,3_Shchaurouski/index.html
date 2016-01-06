@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lesson 3</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="main">
+		<div class="search" align="center">
+			<input type="text" placeholder="Minsk" class="search-field"/>
+			<button class="search-button"><i class="fa fa-question-circle"></i> Search</button>
+		</div>
+		<div class="geolocate" align="center"><button class="geolocate-button"><i class="fa fa-map-marker"></i> Get geolocation</button></div>
+		<div class="info" align="center">
+			<table class="info-table">
+				<tbody>
+					<tr class="city">
+						<td>City</td>
+						<td class="city-value"></td>
+					</tr>
+					<tr class="temperature">
+						<td>Temperature</td>
+						<td class="temperature-value"></td>
+					</tr>
+					<tr class="pressure">
+						<td>Pressure</td>
+						<td class="pressure-value"></td>
+					</tr>
+					<tr class="humidity">
+						<td>Humidity</td>
+						<td class="humidity-value"></td>
+					</tr>
+					<tr class="sunrise">
+						<td>Sunrise</td>
+						<td class="sunrise-value"></td>
+					</tr>
+					<tr class="sunset">
+						<td>Sunset</td>
+						<td class="sunset-value"></td>
+					</tr>
+					<tr class="geo-coords">
+						<td>Coordinates</td>
+						<td class="geo-coords-value"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="history" align="center">
+		</div>
+	</div>
+</body>
+<script src="script.js"></script>
+</html>

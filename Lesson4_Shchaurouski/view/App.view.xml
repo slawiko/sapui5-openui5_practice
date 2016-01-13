@@ -1,7 +1,41 @@
 <mvc:View
 		controllerName="leverx.sap.shchaurouski.fourth.controller.App"
 		xmlns="sap.m"
-		xmlns:mvc="sap.ui.core.mvc">
-	<Text
-		text="text"/>
+		xmlns:mvc="sap.ui.core.mvc"
+		xmlns:f="sap.ui.layout.form">
+
+	<App>
+		<pages>
+			<Page title="Lesson 4">
+				<content>
+					<Panel headerText="Simple Form">
+						<content>
+							<f:SimpleForm>
+								<f:content>
+									<Label text="First name"/>
+									<Text text="Slava"/>
+
+									<Label text="Last name"/>
+									<Text text="Shchaurouski"/>
+
+									<Label text="Telephone number"/>
+									<Text text="+375 (29) 386 26 83"/>
+
+									<Label text="Company"/>
+									<Text text="BSU"/>
+								</f:content>
+							</f:SimpleForm>
+						</content>
+					</Panel>
+				</content>
+				<footer>
+					<Bar>
+						<contentRight>
+							<Button id="showDialog" text="Show Dialog" press="handleShowDialogPress"/>
+						</contentRight>
+					</Bar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
 </mvc:View>

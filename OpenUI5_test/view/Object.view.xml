@@ -1,0 +1,85 @@
+<mvc:View
+        controllerName="leverx.test.controller.Object"
+        xmlns="sap.m"
+        xmlns:l="sap.ui.layout"
+        xmlns:f="sap.ui.layout.form"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns:semantic="sap.m.semantic">
+
+    <semantic:FullscreenPage
+            id="page"
+            navButtonPress="onNavBack"
+            showNavButton="true"
+            title="{i18n>objectTitle}">
+
+        <semantic:content>
+
+            <!-- Declaration of Icon Tab Bar (tabs with content)
+            See API description @https://openui5beta.hana.ondemand.com/#docs/api/symbols/sap.m.IconTabBar.html -->
+            <IconTabBar
+                    id="idIconTabBar"
+                    applyContentPadding="false">
+
+                <!-- Declaration of Icon Tab item (aggregation items)
+                See API description @https://openui5beta.hana.ondemand.com/#docs/api/symbols/sap.m.IconTabFilter.html -->
+                <items>
+                    <IconTabFilter
+                            id="mainTabFilter"
+                            text="{i18n>MainTabTitle}"
+                            icon="sap-icon://list"
+                            key="main">
+                        <content>
+
+                            <!-- Declaration of Grid layout
+                            See API description @https://openui5beta.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.Grid.html-->
+                            <l:Grid defaultSpan="L12 M12 S12"
+                                    width="auto">
+                                <l:content>
+
+                                    <!-- Declaration of Simple Form
+                                    See API description @https://openui5beta.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.SimpleForm.html-->
+                                    <f:SimpleForm id="SimpleFormChange354"
+                                                  minWidth="1024"
+                                                  maxContainerCols="2"
+                                                  editable="true"
+                                                  layout="ResponsiveGridLayout"
+                                                  title="{i18n>ObjectFormLabel}"
+                                                  labelSpanL="3"
+                                                  labelSpanM="3"
+                                                  emptySpanL="4"
+                                                  emptySpanM="4"
+                                                  columnsL="1"
+                                                  columnsM="1"
+                                                  class="editableForm">
+                                        <f:content>
+                                            <!-- Declaration of Label for the 1st Field
+                                            See API description @https://openui5beta.hana.ondemand.com/#docs/api/symbols/sap.m.Label.html-->
+                                            <Label text="{i18n>NameFieldLabel}" />
+                                            <!-- Declaration of Input for the 1st Field
+                                            See API description @https://openui5beta.hana.ondemand.com/#docs/api/symbols/sap.m.Input.html-->
+                                            <Input value="{ProjectName}"/>
+
+                                            <Label text="{i18n>LocationFieldLabel}" />
+                                            <Input value="{Location}"/>
+
+                                            <Label text="{i18n>TimeframeFieldLabel}" />
+                                            <Input value="{
+                                                parts: [
+                                                    { path: 'Timeframe'}
+                                                ],
+                                                formatter: '.formatter.timeframeFormat'
+                                            }"/>
+                                        </f:content>
+                                    </f:SimpleForm>
+                                </l:content>
+                            </l:Grid>
+                        </content>
+                    </IconTabFilter>
+                </items>
+            </IconTabBar>
+
+        </semantic:content>
+
+    </semantic:FullscreenPage>
+
+</mvc:View>

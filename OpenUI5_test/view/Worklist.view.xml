@@ -1,0 +1,76 @@
+<mvc:View
+	controllerName="leverx.test.controller.Worklist"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:semantic="sap.m.semantic">
+
+	<semantic:FullscreenPage
+		id="page"
+		title="{i18n>worklistViewTitle}">
+
+		<semantic:content>
+
+            <!-- Declaration of table
+            See API description @https://openui5beta.hana.ondemand.com/#docs/api/symbols/sap.m.Table.html -->
+			<Table
+				id="table"
+				width="auto"
+				class="sapUiResponsiveMargin"
+				items="{
+					path: '/Projects',
+					sorter: {
+						path: 'ProjectId',
+						descending: false
+						}
+					}"
+				noDataText="{i18n>tableNoDataText}"
+				busyIndicatorDelay="{worklistView>/tableBusyDelay}"
+				growing="true"
+				growingScrollToLoad="true"
+				updateFinished="onUpdateFinished">
+
+				<headerToolbar>
+					<Toolbar>
+						<Title id="tableHeader" text="{worklistView>/worklistTableTitle}"/>
+					</Toolbar>
+				</headerToolbar>
+
+				<columns>
+                    <!-- Declaration of table columns (aggregation columns)
+                    See API description @https://openui5beta.hana.ondemand.com/#docs/api/symbols/sap.m.Column.html -->
+					<Column id="nameColumn">
+						<Text text="{i18n>TableNameColumnTitle}" id="nameColumnTitle"/>
+					</Column>
+					<Column id="unitNumberColumn">
+						<Text text="{i18n>TableUnitNumberColumnTitle}" id="unitNumberColumnTitle"/>
+					</Column>
+				</columns>
+
+				<items>
+                    <!-- Declaration of table content (aggregation items)
+                    See API description @https://openui5beta.hana.ondemand.com/#docs/api/symbols/sap.m.ColumnListItem.html -->
+					<ColumnListItem
+						type="Navigation"
+						press="onPress">
+						<cells>
+                            <!-- Cell #1 declared ObjectIdentifier is used as cell container
+                            See API description @https://openui5beta.hana.ondemand.com/#docs/api/symbols/sap.m.ObjectIdentifier.html -->
+							<ObjectIdentifier
+								title="{ProjectName}"/>
+                            <!-- Cell #2 declared ObjectNumber is used as cell container
+                            See API description @https://openui5beta.hana.ondemand.com/#docs/api/symbols/sap.m.ObjectNumber.html -->
+							<ObjectNumber
+								number="{
+									path: 'Timeframe'
+								}"
+								unit="units"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+
+		</semantic:content>
+
+	</semantic:FullscreenPage>
+
+</mvc:View>

@@ -1,0 +1,67 @@
+<mvc:View
+	controllerName="leverx.sap.shchaurouski.fifth.controller.App"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<App id="app">
+		<pages>
+			<Page title="Products info">
+				<content>
+					<Table
+						id="table"
+						items="{
+								path: '/Products',
+								sorter: {
+									path: 'Name'
+									}
+							}">
+
+						<headerToolbar>
+							<Toolbar>
+								<Title id="tableHeader" text="Products"/>
+							</Toolbar>
+						</headerToolbar>
+
+						<columns>
+							<Column id="idColumn">
+								<Text text="ID" id="idColumnTitle"/>
+							</Column>
+							<Column id="nameColumn">
+								<Text text="Name" id="nameColumnTitle"/>
+							</Column>
+							<Column id="weightColumn">
+								<Text text="Weight" id="weightColumnTitle"/>
+							</Column>
+							<Column id="priceColumn">
+								<Text text="Price" id="priceColumnTitle"/>
+							</Column>
+							<Column id="ratingColumn">
+								<Text text="Rating" id="ratingColumnTitle"/>
+							</Column>
+							<Column id="reviewButtonColumn">
+								<Text text="Reviews" id="reviewButtonColumnTitle"/>
+							</Column>
+						</columns>
+
+						<items>
+							<ColumnListItem>
+								<cells>
+									<Text text="{Id}"/>
+									<Text text="{Name}"/>
+									<Text text="{WeightMeasure} {WeightUnit}"/>
+									<Text text="{Price}"/>
+									<RatingIndicator maxValue="5" class="sapUiSmallMarginBottom" value="{RatingCount}"/>
+									<Button text="Reviews"
+											press="onReviewPress">
+									</Button>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+				<footer>
+					<Bar/>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

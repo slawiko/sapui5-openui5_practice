@@ -1,0 +1,22 @@
+<l:VerticalLayout
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	width="100%">
+	<l:content>
+		<List
+			id="reviewsList"
+			items="{
+				path: '/Reviews',
+				parameters: {
+					custom: {
+						'ProductId': 'HT-6100'
+					}
+				}
+			}" >
+			<FeedListItem
+				sender="{UserDisplayName}"
+				timestamp="{ProductId}"
+				text="{Comment}" />
+		</List>
+	</l:content>
+</l:VerticalLayout>

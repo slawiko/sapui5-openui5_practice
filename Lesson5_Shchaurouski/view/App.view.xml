@@ -49,7 +49,7 @@
 									<Text text="{Name}"/>
 									<Text text="{WeightMeasure} {WeightUnit}"/>
 									<Text text="{Price}"/>
-									<RatingIndicator maxValue="5" class="sapUiSmallMarginBottom" value="{RatingCount}"/>
+									<RatingIndicator editable="false" maxValue="5" class="sapUiSmallMarginBottom" value="{RatingCount}"/>
 									<Button text="Reviews"
 											press="onReviewPress">
 									</Button>
